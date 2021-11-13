@@ -76,10 +76,12 @@ var fight = function (enemyName) {
     } else {
       window.alert("You need to choose a valid option. Try again!");
     }
-
-    }
   }
+};
 
 for (var i = 0; i < enemyNames.length; i++) {
-    fight(enemyNames[i]);
+  debugger;
+  enemyHealth = 50;
+  var pickedEnemyName = enemyNames[i]
+  fight(pickedEnemyName);
 }
