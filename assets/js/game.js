@@ -1,9 +1,14 @@
-var playerName = window.prompt("What is your robot's name?")
-console.log(playerName)
+var playerName = window.prompt("What is your robot's name?");
+var playerHealth = 100;
+var playerAttack = 10;
 
-function fight() {
-    window.alert("The fight has begun!");
-}
+var enemyName = "Roborto";
+var enemyHealth = 50;
+var enemyAttack = 12;
 
-// fight();
+var fight = function() {
+    window.alert("Welcome to Robot Gladiators!");
+};
+
+fight()
 
