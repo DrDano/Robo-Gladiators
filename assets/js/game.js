@@ -85,8 +85,10 @@ var fight = function (enemyName) {
   }
 };
 
-for (var i = 0; i < enemyNames.length; i++) {
-  enemyHealth = 50;
-  var pickedEnemyName = enemyNames[i];
-  fight(pickedEnemyName);
+if (playerHealth > 0) {
+    for (var i = 0; i < enemyNames.length; i++) {
+        enemyHealth = 50;
+        var pickedEnemyName = enemyNames[i];
+        fight(pickedEnemyName);
+      }
 }
