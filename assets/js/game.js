@@ -91,4 +91,7 @@ if (playerHealth > 0) {
         debugger;
         fight(pickedEnemyName);
       }
+} else {
+    window.alert("You have lost your robot in battle! Game Over!");
+    break;
 }
