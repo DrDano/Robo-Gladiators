@@ -100,7 +100,7 @@ var startGame = function () {
       break;
     }
   }
-  startGame();
+  endGame();
 };
 
 var endGame = function() {
