@@ -95,6 +95,13 @@ var startGame = function () {
       var pickedEnemyName = enemyNames[i];
       debugger;
       fight(pickedEnemyName);
+      if (playerHealth > 0 && i < enemyNames.length - 1) {
+          var storeConfirm = window.confirm("The fight is over, visit the store before the next round?");
+          
+          if (storeConfirm) {
+              shop();
+          }
+      }
     } else {
       window.alert("You have lost your robot in battle! Game Over!");
       break;
@@ -117,6 +124,10 @@ var endGame = function() {
     } else {
         window.alert("Thank you for playing Robot Gladiators! Come back soon!");
     }
+};
+
+var shop = function() {
+    console.log("entered the shop");
 };
 
 startGame()
