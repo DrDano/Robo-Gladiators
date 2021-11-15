@@ -127,7 +127,27 @@ var endGame = function() {
 };
 
 var shop = function() {
-    console.log("entered the shop");
+    var shopOptionPrompt: window.prompt("Would you like to REFILL your health, UPGRADE your attack, or LEAVE the shop? Please enter one: 'REFILL', 'UPGRADE', or 'LEAVE' to make a choice.");
+
+    switch (shopOptionPrompt) {
+        case "refill":
+            window.alert("Refilling player's health by 20 for 7 dollars.")
+            playerHealth += 20;
+            playerMoney -= 7;
+            break;
+        case "upgrade":
+            window.alert("Upgrading player's attack by 6 for 7 dollars.");
+            playerAttack += 6;
+            playerMoney -= 7;
+            break;
+        case "leave":
+            window.alert("Leaving the store.")
+            break;
+        default:
+            window.alert("You did not pick a valid option. Try Again.");
+            shop();
+            break;
+    }
 };
 
 startGame()
